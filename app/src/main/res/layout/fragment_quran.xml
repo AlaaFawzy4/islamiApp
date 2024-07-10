@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <ImageView
+       android:id="@+id/quranimg"
+       android:layout_width="wrap_content"
+       android:layout_height="0dp"
+       android:src="@drawable/qur2an_screen_logo"
+       android:adjustViewBounds="true"
+       app:layout_constraintHeight_percent="0.25"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       />
+   <View
+       android:id="@+id/first_horizontial_view"
+       android:layout_width="match_parent"
+       android:layout_height="3dp"
+       android:background="@color/gold"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/quranimg"
+       android:layout_marginTop="12dp"
+       app:layout_constraintBottom_toTopOf="@id/quran_name"
+       android:layout_marginBottom="5dp"
+       />
+   <TextView
+       android:id="@+id/quran_name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="اسم السورة"
+       android:textSize="25sp"
+       android:textAlignment="center"
+       android:textColor="@color/black"
+       app:layout_constraintStart_toEndOf="@id/quran_index"
+       app:layout_constraintTop_toBottomOf="@id/first_horizontial_view"
+       app:layout_constraintEnd_toEndOf="parent"
+       />
+   <View
+       android:id="@+id/vertical_view"
+       android:layout_width="3dp"
+       android:layout_height="0dp"
+       android:background="@color/gold"
+       app:layout_constraintStart_toEndOf="@id/quran_index"
+       app:layout_constraintEnd_toStartOf="@id/quran_name"
+       app:layout_constraintTop_toBottomOf="@id/first_horizontial_view"
+       />
+
+   <TextView
+       android:id="@+id/quran_index"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="ترتيب الآيات"
+       android:textSize="25sp"
+       android:textAlignment="center"
+       android:textColor="@color/black"
+       app:layout_constraintTop_toBottomOf="@id/first_horizontial_view"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/quran_name"
+       />
+   <View
+       android:id="@+id/second_horizontial_view"
+       android:layout_width="match_parent"
+       android:layout_height="3dp"
+       android:background="@color/gold"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/quran_name"
+      android:layout_marginTop="5dp"
+       />
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerview"
+       android:layout_width="match_parent"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/second_horizontial_view"
+/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
