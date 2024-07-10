@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".islamiapp.a.islamiapp.fragment.HadethFragment">
+
+<ImageView
+    android:id="@+id/hadeth_logo"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:src="@drawable/hadeth_logo"
+    app:layout_constraintHeight_percent="0.2"
+    android:adjustViewBounds="true"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+    />
+    <View
+        android:id="@+id/first_horithontial_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hadeth_logo"
+        android:layout_marginTop="18dp"
+        />
+    <TextView
+        android:id="@+id/hadeth_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الأحاديث"
+        android:textColor="@color/blacktext"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_horithontial_line"
+        />
+    <View
+        android:id="@+id/second_horithontial_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hadeth_title"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_horithontial_line"
+        android:padding="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:textAlignment="center"
+        android:paddingBottom="20dp"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

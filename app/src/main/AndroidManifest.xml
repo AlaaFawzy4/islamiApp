@@ -13,7 +13,13 @@
         android:theme="@style/Theme.IslamiAppProject"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name=".islamiapp.a.islamiapp.HadethDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".islamiapp.a.islamiapp.SuraDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".islamiapp.a.islamiapp.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,14 +28,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".islamiapp.a.islamiapp.HomeActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
